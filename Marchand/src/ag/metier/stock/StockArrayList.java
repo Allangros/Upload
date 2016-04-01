@@ -1,7 +1,7 @@
 package ag.metier.stock;
 
 import ag.metier.produit.Alimentaire;
-import ag.metier.produit.Consommable;
+import ag.metier.produit.Conso;
 import ag.metier.produit.Produit;
 
 import java.util.ArrayList;
@@ -125,7 +125,7 @@ public class StockArrayList extends ArrayList<Produit> {
         Produit produitTrouve = null;
         for (Produit produit : this) {
             if (produit.getNom().equals(e.getNom())) {
-                if (produit instanceof Alimentaire && e instanceof Alimentaire || produit instanceof Consommable && e instanceof Consommable) {
+                if (produit instanceof Alimentaire && e instanceof Alimentaire || produit instanceof Conso && e instanceof Conso) {
                     produitTrouve = produit;
                     break;
                 }

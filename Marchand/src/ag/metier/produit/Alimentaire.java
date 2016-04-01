@@ -63,7 +63,7 @@ public class Alimentaire extends Produit implements Comparable<Produit>{
         int retour=0;
         if (o instanceof Alimentaire) {
             retour = this.getNom().compareTo(o.getNom());
-        } else if (o instanceof Consommable) {
+        } else if (o instanceof Conso) {
                 retour = 1;
         }
         return retour;

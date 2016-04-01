@@ -1,15 +1,15 @@
 package ag.metier.produit;
 
-public class Consommable extends Produit implements Comparable<Produit>{
+public class Conso extends Produit implements Comparable<Produit>{
 
 
     private int qte;
 
-    public Consommable() {
+    public Conso() {
         super();
     }
 
-    public Consommable(String nom, int qte, float PrixUnitaire) {
+    public Conso(String nom, int qte, float PrixUnitaire) {
         super(nom, PrixUnitaire);
         this.qte = qte;
     }
@@ -34,8 +34,8 @@ public class Consommable extends Produit implements Comparable<Produit>{
     @Override
     public boolean equals(Object obj) {
         boolean b = false;
-        if (obj instanceof Consommable) {
-            Consommable e=(Consommable) obj;
+        if (obj instanceof Conso) {
+            Conso e=(Conso) obj;
             b=(this.getNom().equals(e.getNom()));
         }
         return b;
@@ -44,8 +44,8 @@ public class Consommable extends Produit implements Comparable<Produit>{
     @Override
     public boolean rajoute(Produit e) {
         boolean ok = false;
-        if (e instanceof Consommable && e.getNom().equals(this.getNom())) {
-            Consommable a = (Consommable) e;
+        if (e instanceof Conso && e.getNom().equals(this.getNom())) {
+            Conso a = (Conso) e;
             this.setPrixUnitaire((this.getPrix() + e.getPrix()) / (this.getQte() + a.getQte()));
             ok = true;
         }
@@ -60,7 +60,7 @@ public class Consommable extends Produit implements Comparable<Produit>{
     @Override
     public int compareTo(Produit o) {
         int retour=0;
-        if (o instanceof Consommable) {
+        if (o instanceof Conso) {
                 retour = this.getNom().compareTo(o.getNom());
             } else if (o instanceof Alimentaire) {
                 retour = -1;

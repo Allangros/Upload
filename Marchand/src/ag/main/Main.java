@@ -5,7 +5,7 @@ import java.util.TreeMap;
 
 import ag.metier.marchand.Marchand;
 import ag.metier.produit.Alimentaire;
-import ag.metier.produit.Consommable;
+import ag.metier.produit.Conso;
 import ag.metier.produit.Produit;
 import ag.metier.stock.Stock;
 
@@ -20,7 +20,7 @@ public class Main {
 		// System.out.println(Produit.CPT);
 		Alimentaire banane = new Alimentaire("Banane", 3.5f, 0.99f);
 		// System.out.println(Produit.CPT);
-		Consommable enveloppe = new Consommable("Enveloppe", 50, 0.1f);
+		Conso enveloppe = new Conso("Enveloppe", 50, 0.1f);
 		// System.out.println(Produit.CPT);
 		Alimentaire fraise = new Alimentaire("Fraise", 0.5f, 2.99f);
 		Alimentaire patate = new Alimentaire("Patate", 5f, 0.66f);
