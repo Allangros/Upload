@@ -1,6 +1,10 @@
 package ag.main;
 
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.LineNumberReader;
 import java.util.Collections;
+import java.util.Scanner;
 import java.util.TreeMap;
 
 import ag.metier.marchand.Marchand;
@@ -8,12 +12,89 @@ import ag.metier.produit.Alimentaire;
 import ag.metier.produit.Conso;
 import ag.metier.produit.Produit;
 import ag.metier.stock.Stock;
+import ag.metier.stock.StockArrayList;
 
 public class Main {
 
 	public static void main(String[] args) {
 		Main m = new Main();
-		m.init();
+		m.save();
+	}
+
+	public void save() {
+		StockArrayList stock = new StockArrayList();
+		InputStreamReader entreeStandard = new InputStreamReader(System.in);
+		LineNumberReader resLecture = new LineNumberReader(entreeStandard);
+		//System.out.println("nom du produit");
+		Produit p = null;
+		String nom = null;
+		String type = null;
+		float PrixUnitaire = 0f;
+		lireConsole();
+		//CreaProd();
+		//
+		// try {
+		//
+		// nom = resLecture.readLine();
+		// while (nom != "")
+		// if (nom != null) {
+		// p.setNom(nom);
+		// }
+		// type = resLecture.readLine();
+		// if (type == "Alimentaire") {
+		// Alimentaire o = (Alimentaire) p;
+		//
+		// }
+		//
+		// } catch (IOException e) {
+		// e.printStackTrace();
+		// }
+
+	}
+
+	private void CreaProd(String nom, String type, float poids, int qte, float PrixUnitaire) {
+		if (type=="Alimentaire"){
+			Alimentaire a=new Alimentaire(nom,poids,PrixUnitaire);
+		} else if(type=="Conso"){
+			Conso c=new Conso(nom,qte, PrixUnitaire);
+		}
+	}
+
+	public void lireConsole() {
+		InputStreamReader entreeStandard = new InputStreamReader(System.in);
+		LineNumberReader resLecture = new LineNumberReader(entreeStandard);
+
+
+		String nom = null;
+		String type = null;
+		int qte = 0;
+		float poids = 0f;
+		String type2="Alimentaire";
+		float PrixUnitaire;
+		System.out.println("nom du Produit");
+		try {
+			nom = resLecture.readLine();
+			System.out.println("type du Produit");
+			
+			type = resLecture.readLine();
+			System.out.println(type);
+			if (type==type2) {
+				System.out.println("poids du Produit");
+				poids = (float)resLecture.read();
+				System.out.println("Prix Unitaire du Produit");
+				PrixUnitaire = (float)resLecture.read();
+			} else if (type == "Conso") {
+				System.out.println("qte du Produit");
+				qte = resLecture.read();
+				System.out.println("Prix Unitaire du Produit");
+				PrixUnitaire = resLecture.read();
+			}
+
+		} catch (IOException e) {
+
+			e.printStackTrace();
+		}
+
 	}
 
 	public void init() {
