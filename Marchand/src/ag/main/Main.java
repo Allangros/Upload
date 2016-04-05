@@ -22,8 +22,33 @@ public class Main {
 
 	public static void main(String[] args) {
 		Main m = new Main();
-		 m.save();
-		//m.recup();
+		// m.save();
+		// m.recup();
+		m.saveMarchand();
+	}
+
+	private void saveMarchand() {
+		Marchand robert = new Marchand(0,0,200);
+		robert.setNomDuMarchand("Robert");
+		for (int i = 0; i < 10; i++) {
+			robert.getStockFamille().add(new Alimentaire("Aliment" + i, 2, i + 1));
+			robert.getMonStock().add(new Conso("Conso" + i, 2, i + 1));
+			robert.getStockPrivee().add(new Alimentaire("Aliment" + i, 2, i + 1));
+		}
+		File fMarchand = new File("marchand.ser");
+		ObjectOutputStream o = null;
+		try {
+			o = new ObjectOutputStream(new FileOutputStream(fMarchand));
+			o.writeObject(robert);
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				o.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
 	}
 
 	private void recup() {
@@ -43,28 +68,28 @@ public class Main {
 
 	public void save() {
 		StockArrayList stock = new StockArrayList();
-//		Alimentaire a = new Alimentaire("banana", 2.5f, 2.5f);
-//		File FileAlimentaire = new File("alimentaire.ser");
-//		ObjectOutputStream obj = null;
-//		try {
-//			obj = new ObjectOutputStream(new FileOutputStream(FileAlimentaire));
-//			obj.writeObject(a);
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		} finally {
-//			try {
-//				obj.close();
-//			} catch (IOException e) {
-//				e.printStackTrace();
-//			}
-//		}
+		// Alimentaire a = new Alimentaire("banana", 2.5f, 2.5f);
+		// File FileAlimentaire = new File("alimentaire.ser");
+		// ObjectOutputStream obj = null;
+		// try {
+		// obj = new ObjectOutputStream(new FileOutputStream(FileAlimentaire));
+		// obj.writeObject(a);
+		// } catch (IOException e) {
+		// e.printStackTrace();
+		// } finally {
+		// try {
+		// obj.close();
+		// } catch (IOException e) {
+		// e.printStackTrace();
+		// }
+		// }
 
 		InputStreamReader entreeStandard = new InputStreamReader(System.in);
 		LineNumberReader resLecture = new LineNumberReader(entreeStandard);
 		// System.out.println("nom du produit");
-//		Produit p = null;
-//		String nom = null;
-//		String type = null;
+		// Produit p = null;
+		// String nom = null;
+		// String type = null;
 		// float PrixUnitaire = 0f;
 		CreaProd(stock);
 		for (Produit produit : stock) {
@@ -83,11 +108,11 @@ public class Main {
 		int qte = 0;
 		float poids = 0f;
 		String type2 = "Alimentaire";
-		float PrixUnitaire=0f;
+		float PrixUnitaire = 0f;
 		System.out.println("nom du Produit");
 		try {
 			nom = resLecture.readLine();
-				while (!nom.equals("")) {
+			while (!nom.equals("")) {
 				System.out.println("type du Produit");
 
 				type = resLecture.readLine();
@@ -112,7 +137,7 @@ public class Main {
 				}
 				System.out.println("saisir nouveau nom");
 				nom = resLecture.readLine();
-				if(nom.equals("")){
+				if (nom.equals("")) {
 					break;
 				}
 			}

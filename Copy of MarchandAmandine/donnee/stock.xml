@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<StockList nomStock='monStockPrive'>
+		<Alimentaire nom='banane' poids='12' PrixUnitaire='0.99' />
+		<Alimentaire nom='patate' poids='5' PrixUnitaire='1.8' />
+		<Conso nom='casserole' qte='3' PrixUnitaire='12' />
+	</StockList>

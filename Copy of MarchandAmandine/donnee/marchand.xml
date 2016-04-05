@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Commercant>
+<marchand nomMarchand='Robert'>
+	<stockList nomStock='monStockPrive'>
+		<Alimentaire nom='banane' poids='12' PrixUnitaire='0.99' />
+		<Alimentaire nom='patate' poids='5' PrixUnitaire='1.8' />
+		<Conso nom='casserole' qte='3' PrixUnitaire='12' />
+
+	</stockList>
+	<stockList nomStock='monStock'>
+		<Alimentaire nom='A1' poids='1' PrixUnitaire='1' />
+		<Alimentaire nom='A2' poids='2' PrixUnitaire='2' />
+		<Conso nom='A3' qte='3' PrixUnitaire='3' />
+
+	</stockList>
+	<stockList nomStock='monStockFamille'>
+		<Alimentaire nom='C1' poids='1' PrixUnitaire='1' />
+		<Alimentaire nom='C2' poids='2' PrixUnitaire='2' />
+		<Conso nom='C3' qte='3' PrixUnitaire='3' />
+	</stockList>
+</marchand>
+<marchand nomMarchand='Gilbert'>
+	<stockList nomStock='monStockPrive'>
+		<Alimentaire nom='banane' poids='12' PrixUnitaire='0.99' />
+		<Alimentaire nom='patate' poids='5' PrixUnitaire='1.8' />
+		<Conso nom='casserole' qte='3' PrixUnitaire='12' />
+
+	</stockList>
+	<stockList nomStock='monStock'>
+		<Alimentaire nom='A1' poids='1' PrixUnitaire='1' />
+		<Alimentaire nom='A2' poids='2' PrixUnitaire='2' />
+		<Conso nom='A3' qte='3' PrixUnitaire='3' />
+
+	</stockList>
+	<stockList nomStock='monStockFamille'>
+		<Alimentaire nom='C1' poids='1' PrixUnitaire='1' />
+		<Alimentaire nom='C2' poids='2' PrixUnitaire='2' />
+		<Conso nom='C3' qte='3' PrixUnitaire='3' />
+	</stockList>
+</marchand>
+</Commercant>
