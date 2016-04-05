@@ -1,90 +1,87 @@
 package ag.metier.produit;
 
-public abstract class Produit implements Comparable<Produit> {
+import java.io.Serializable;
 
-    public static int CPT = 0; // Le compteur doit etre dans produit car il sera
-    // la quelque soit le produit.
+public abstract class Produit implements Serializable, Comparable<Produit> {
 
-    private int id;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
-    private float prixUnitaire;
-    private String nom;
+	public static int CPT = 0; // Le compteur doit etre dans produit car il sera
+	// la quelque soit le produit.
 
-    public Produit() {
-        id = Produit.CPT;
-        CPT++;
-    }
+	private int id;
 
-    public Produit(String nom, float prixUnitaire) {
-        id = Produit.CPT;
-        this.nom = nom;
-        this.prixUnitaire = prixUnitaire;
-        CPT++;
-    }
+	private float prixUnitaire;
+	private String nom;
 
-    public abstract float getPrix();
+	public Produit() {
+		id = Produit.CPT;
+		CPT++;
+	}
 
-    public static int getCPT() {
-        return CPT;
-    }
+	public Produit(String nom, float prixUnitaire) {
+		id = Produit.CPT;
+		this.nom = nom;
+		this.prixUnitaire = prixUnitaire;
+		CPT++;
+	}
 
-    public static void setCPT(int cPT) {
-        CPT = cPT;
-    }
+	public abstract float getPrix();
 
-    public int getId() {
-        return id;
-    }
+	public static int getCPT() {
+		return CPT;
+	}
 
-    public void setId(int id) {
-        this.id = id;
-    }
+	public static void setCPT(int cPT) {
+		CPT = cPT;
+	}
 
-    public float getPrixUnitaire() {
-        return prixUnitaire;
-    }
+	public int getId() {
+		return id;
+	}
 
-    public void setPrixUnitaire(float prixUnitaire) {
-        if (prixUnitaire > 0) {
-            this.prixUnitaire = prixUnitaire;
-        } else if (prixUnitaire <= 0) {
-            System.out.println("Pas Bon");
-        }
-    }
+	public void setId(int id) {
+		this.id = id;
+	}
 
-    public String getNom() {
-        return nom;
-    }
+	public float getPrixUnitaire() {
+		return prixUnitaire;
+	}
 
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
+	public void setPrixUnitaire(float prixUnitaire) {
+		if (prixUnitaire > 0f) {
+			this.prixUnitaire = prixUnitaire;
+		} else if (prixUnitaire <= 0f) {
+			System.out.println("Pas Bon");
+		}
+	}
 
-    @Override
-    public String toString() {
-        return getNom() + " : " + getPrix();
-    }
+	public String getNom() {
+		return nom;
+	}
 
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
 
-    public abstract boolean rajoute(Produit e);
+	@Override
+	public String toString() {
+		return getNom() + " : " + getPrix() + "$";
+	}
 
-/*    @Override
-    public int compareTo(Produit o) {
-        int retour = 0;
-        if (o instanceof Consommable) {
-            if (this instanceof Consommable) {
-                retour = this.getNom().compareTo(o.getNom());
-            } else if (this instanceof Alimentaire) {
-                retour = 1;
-            }
-        } else if (o instanceof Alimentaire) {
-            if (this instanceof Consommable) {
-                retour = 1;
-            } else if (this instanceof Alimentaire) {
-                retour = this.getNom().compareTo(o.getNom());
-            }
+	public abstract boolean rajoute(Produit e);
 
-        }
-        return retour;
-    }*/
+	/*
+	 * @Override public int compareTo(Produit o) { int retour = 0; if (o
+	 * instanceof Consommable) { if (this instanceof Consommable) { retour =
+	 * this.getNom().compareTo(o.getNom()); } else if (this instanceof
+	 * Alimentaire) { retour = 1; } } else if (o instanceof Alimentaire) { if
+	 * (this instanceof Consommable) { retour = 1; } else if (this instanceof
+	 * Alimentaire) { retour = this.getNom().compareTo(o.getNom()); }
+	 * 
+	 * } return retour; }
+	 */
 }

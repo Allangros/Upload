@@ -1,9 +1,15 @@
 package ag.metier.produit;
 
-public class Conso extends Produit implements Comparable<Produit>{
+import java.io.Serializable;
+
+public class Conso extends Produit implements Serializable,Comparable<Produit>{
 
 
-    private int qte;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private int qte;
 
     public Conso() {
         super();
