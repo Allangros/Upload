@@ -30,22 +30,60 @@ public class Main {
 	}
 
 	private void lectureXml() {
+		StockList stock = null;
+		File file = new File("donnee/stock.xml");
 		BufferedReader reader = null;
 		try {
-			reader = new BufferedReader(
-					new FileReader("C://DEVFORMATION/Workspace/Copy of MarchandAmandine/donnee/stock.xml"));
+			reader = new BufferedReader(new FileReader(file));
 			String chaine = reader.readLine();
 			while (chaine != null) {
-				if (chaine.contains("<StockList "))
-					chaine = chaine;
-				System.out.println(chaine);
+				if (chaine.contains("<StockList ")) {
+					String nomStockCharge = extraitAtt(chaine, "nomStock='");
+					stock = new StockList();
+					stock.setNom(nomStockCharge);
+				} else if (chaine.contains("Alimentaire ")) {
+					String nomAlimentaireCharge = extraitAtt(chaine, "nom='");
+					String poidsCharge = extraitAtt(chaine, "poids='");
+					String prixUnitaireCharge = extraitAtt(chaine, "prixUnitaire='");
+					float poidsC = Float.valueOf(poidsCharge).floatValue();
+					float PrixUnitaireC = Float.valueOf(prixUnitaireCharge).floatValue();
+					Alimentaire a = new Alimentaire(nomAlimentaireCharge, poidsC, PrixUnitaireC);
+					stock.add(a);
+				} else if (chaine.contains("Conso ")) {
+					String nomConsoCharge = extraitAtt(chaine, "nom='");
+					String qteCharge = extraitAtt(chaine, "qte='");
+					String prixUnitaireCharge = extraitAtt(chaine, "prixUnitaire='");
+					int qteC = Float.valueOf(qteCharge).intValue();
+					float PrixUnitaireC = Float.valueOf(prixUnitaireCharge).floatValue();
+					Consommable c = new Consommable(nomConsoCharge, qteCharge, prixUnitaireCharge);
+					stock.add(c);
+				} else if (chaine.contains("</StockList>")) {
+					for (Produits produits : stock) {
+						System.out.println(produits);
+					}
+				}
 				chaine = reader.readLine();
 			}
 		} catch (FileNotFoundException e1) {
 			e1.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
+		}finally{
+			try {
+				reader.close();
+			}catch(Exception e2){
+				e2.printStackTrace();
+			}
 		}
+	}
+
+	private String extraitAtt(String chaine, String ligne) {
+		String res = "";
+		String newchaine=chaine.replace("\"", "'");
+		int deb = newchaine.indexOf(ligne);
+		int fin = newchaine.indexOf("'", deb + ligne.length());
+		res = newchaine.substring(deb+ligne.length(), fin);
+		return res;
 	}
 
 	private void saveMarchand() {
