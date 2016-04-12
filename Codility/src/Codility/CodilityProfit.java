@@ -1,7 +1,5 @@
 package Codility;
 
-import java.util.ArrayList;
-
 public class CodilityProfit {
 
 	public static void main(String[] args) {
@@ -9,26 +7,22 @@ public class CodilityProfit {
 		pro.init();
 	}
 
-	public void init() {
+	public int init() {
 		int[] A = { 23171, 21011, 21123, 21366, 21013, 21367 };
-		ArrayList intList = new ArrayList<Integer>();
-		for (int intValue : A) {
-			intList.add(intValue);
-		}
-		// ArrayList<Integer> list = new ArrayList<Integer>(Arrays.asList(A));
-		// Integer[] B = A.clone();
-		int cpt = 0;
-		int Valmax = 0;
-		for (int i = 0; i < A.length - 1; i++) {
-			cpt++;
-			int lol = (int) intList.get(cpt)- A[i];
-			Valmax = Math.max(Valmax, lol);
 
-			// for (int j = i + 1; j < A.length; j++) {
-			// Valmax = (int) Math.max(Valmax, A[j] - A[i]);
-			// }
+		if (A.length == 0 || A.length == 1) {
+			return 0;
 		}
-		System.out.println(Valmax);
+		int maxProfit = 0;
+		int ProfitHere = 0;
+		int MinPrice = A[0];
+		for (int i = 0; i < A.length; i++) {
+			ProfitHere = Math.max(0, A[i] - MinPrice);
+			MinPrice = Math.min(MinPrice, A[i]);
+			maxProfit = Math.max(ProfitHere, maxProfit);
+		}
+
+		return maxProfit;
 	}
 
 }

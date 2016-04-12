@@ -1,9 +1,15 @@
 package ag.metier.produit;
 
-public class Alimentaire extends Produit implements Comparable<Produit>{
+import java.io.Serializable;
+
+public class Alimentaire extends Produit implements Serializable,Comparable<Produit>{
 
 
-    private float poids;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private float poids;
 
     public Alimentaire() {
         super();
