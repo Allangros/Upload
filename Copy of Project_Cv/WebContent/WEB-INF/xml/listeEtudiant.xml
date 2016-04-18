@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListeEtudiant>
+	<formation id="0">
+		<etudiant nom="Gros" prenom='Allan' metier='Textile'
+			mail='allan.gros@itech.fr'></etudiant>
+	</formation>
+	<formation id="1">
+		<etudiant nom="Downey" prenom='Robert' metier='Acteur'
+			mail='Iron.Man@stark.gun'></etudiant>
+		<etudiant nom="Chris" prenom="Hemsworth" metier="Dieu"
+			mail="Thor.asgard@gods.world"></etudiant>
+	</formation>
+</ListeEtudiant>
