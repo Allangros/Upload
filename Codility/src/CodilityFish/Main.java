@@ -1,4 +1,4 @@
-package CodilityFIsh;
+package CodilityFish;
 
 import java.util.ArrayList;
 
