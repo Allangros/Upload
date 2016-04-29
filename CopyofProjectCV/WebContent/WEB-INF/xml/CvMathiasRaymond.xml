@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CV idEtudiant ="7" nom="RAYMOND" prenom="Mathias" e-mail="mathias.raymond@sfr.fr">
+	<ListeCompetence>
+		<Competence type="Programmation" detail="JAVA/JEE" />
+		<Competence type="Biologie" detail="Analyse moléculaire"
+			niveau="intermediaire" />
+		<Competence type="Biologie" detail="Culture cellulaire"
+			niveau="confirme" />
+		<Competence type="Biologie" detail="Biologie moleculaire"
+			niveau="confirme" />
+		<Competence type="Biologie" detail="Microscopie"
+			niveau="intermediaire" />
+		<Competence type="Biologie" detail="Biologie medicale"
+			niveau="expert" />
+		<Competence type="Langue" detail="Anglais"
+			niveau="confirme, TOEIC : 865/990" />
+		<Competence type="Informatique" detail="Java" niveau="debutant" />
+		<Competence type="Informatique" detail="SQL" niveau="debutant" />
+		<Competence type="Informatique" detail="JUnit" niveau="debutant" />
+		<Competence type="Informatique" detail="XML" niveau="debutant" />
+		<Competence type="Informatique" detail="HTML" niveau="debutant" />
+		<Competence type="Informatique" detail="UML" niveau="debutant" />
+		<Competence type="Informatique" detail="JEE" niveau="debutant" />
+		<Competence type="Informatique" detail="Microsoft office"
+			niveau="confirme" />
+		<Competence type="Informatique" detail="BioEdit"
+			niveau="intermediaire" />
+		<Competence type="Informatique" detail="MEGA" niveau="intermediaire" />
+		<Competence type="Gestion" detail="Management" niveau="intermediaire" />
+		<Competence type="Gestion" detail="Gestion de projet"
+			niveau="intermediaire" />
+
+	</ListeCompetence>
+
+	<ListeExperience>
+		<Experience dateExp=" Janvier-Juin 2014" entreprise="Laboratoire de Virologie - EA4843 ; Faculté de Médecine ; 63000 CLERMONT-FERRAND" poste="Stage Recherche - Virologie">
+			Franchissement d'un modèle in vitro de barrière endothéliale microvasculaire cérébrale par l'entérovirus 71 en conditions normales et inflammatoires
+		</Experience>
+
+		<Experience dateExp="Juin-Juillet 2013" entreprise="Laboratoire de Virologie Hospitalo-universitaire ; CHU Clermont-Ferrand &amp; Faculté de Médecine (EA4843); 63000 CLERMONT-FERRAND"	poste="Stage au service de Virologie">
+			Analyse moléculaire des souches VIH-1 à partir d'une cohorte de patients suivis au CHU de Clermont-Ferrand"
+		</Experience>
+
+		<Experience dateExp="Avril 2010" entreprise="Faculté de Médecine/Pharmacie ; 63000 CLERMONT-FERRAND" poste="Stage d'observation">
+			Stage d'observation au laboratoire de pharmacologie pharmacie INSERM U766 (Unité de recherche mixte)
+		</Experience>
+	</ListeExperience>
+
+	<ListeFormationScolaire>
+		<FormationScolaire date="2016" ecole=""
+			diplome="Formation en programmation JAVA/JEE" />
+		<FormationScolaire  date="2014"
+			ecole="Université d'Auvergne - Institut Universitaire de Technologie 63172 Aubière"
+			diplome="Master Technologie Biomédicale - spécialité Diagnostic Biomédical" />
+		<FormationScolaire  date="2012"
+			ecole="Université d'Auvergne - U.F.R Pharmacie  63000 CLERMONT-FERRAND"
+			diplome="Licence Sciences-Technologies-Santé Mention Biologie Parcours
+					Pharmacologie" />
+		<FormationScolaire  date="2012" ecole="Université d'Auvergne - U.F.R Pharmacie  63000 CLERMONT-FERRAND"
+			diplome="Attestation de formation à l'expérimentation animale, niveau 1" />
+		<FormationScolaire  date="2006-2008"
+			ecole="Université d'Auvergne - U.F.R Medecine 63000 CLERMONT-FERRAND"
+			diplome="Première Année du Premier Cycle des Etudes Médicales (PCEM1)" />
+	</ListeFormationScolaire>
+</CV>

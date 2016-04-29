@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ListeFormation [
+<!ELEMENT ListeFormation (Formation*)>
+<!ELEMENT Formation EMPTY>
+<!ATTLIST Formation dateFormation CDATA #REQUIRED>
+<!ATTLIST Formation lieuFormation CDATA #REQUIRED>
+<!ATTLIST Formation domaineFormation CDATA #REQUIRED> 
+]>
+<ListeFormation>
+	<Formation dateFormation="Decembre-Fevrier" lieuFormation="Strasbourg"
+		domaineFormation="Java-J2E" />
+
+	<Formation dateFormation="Mars-Avril" lieuFormation="Lyon"
+		domaineFormation="Java-J2E" />
+
+	<Formation dateFormation="Avril-Mai" lieuFormation="Lyon"
+		domaineFormation="Dot.NET" />
+
+</ListeFormation>

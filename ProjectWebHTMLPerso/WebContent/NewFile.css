@@ -1,0 +1,39 @@
+@CHARSET "ISO-8859-1";
+
+p {
+	color: red;
+	font-size: 12px;
+}
+
+h3 {
+	text-align: center;
+}
+
+p {
+	width: 350px; /* On a indiqué une largeur (obligatoire) */
+	margin: auto;
+	/* On peut donc demander à ce que le bloc soit centré avec auto */
+	border: 1px solid black;
+	text-align: justify;
+	padding: 12px;
+	margin-bottom: 20px;
+	overflow: auto;
+	word-wrap: break-word;
+	font-weigth: 15px;
+}
+
+h1 {
+	width: 350px; /* On a indiqué une largeur (obligatoire) */
+	margin: auto;
+	/* On peut donc demander à ce que le bloc soit centré avec auto */
+	border: 10px solid black;
+	text-align: justify;
+	padding: 18px;
+	margin-bottom: 35px;
+	color: red;
+	overflow: auto;
+	/*Permet d'ajouter les barres de défilement si le texte dépasse du cadre*/
+	word-wrap: break-word;
+	/*Permet de couper les mots si dépassement meme sans espace ou autre*/
+	background-color: yellow;
+}

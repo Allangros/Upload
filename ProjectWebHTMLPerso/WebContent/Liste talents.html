@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Talents</title>
+
+</head>
+<link rel="stylesheet" href="Talents.css" />
+<body>
+
+	<div>
+		<h1>LES TALENTS</h1>
+	</div>
+	<p>
+	<table>
+		<caption>Liste des Formations</caption>
+		<tr>
+			<th>Dates</th>
+			<th>Lieux</th>
+			<th>Technologie</th>
+		<tr>
+			<td>Février</td>
+			<td>Strasbourg</td>
+			<td>J2E</td>
+		</tr>
+		<tr>
+			<td>Mars/Avril</td>
+			<td>Lyon</td>
+			<td>J2E</td>
+		</tr>
+		<tr>
+			<td>Avril/Mai</td>
+			<td>Lyon</td>
+			<td>.Net</td>
+		</tr>
+	</table>
+	<p>
+	<form action="trait.java" methode="get">
+
+		Nom : <input type="text" name="nom" /><br /> Lieux : <input
+			type="text" name="lieu" /><br /> <input type="radio" name="reponse"
+			value="oui" checked>OUI<br /> <input type="radio"
+			name="reponse" value="non">NON <br /> <input type="submit"
+			value="GOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO" />
+
+	</form>
+	<form action="trait.java">
+		<fieldset>
+			<legend>Informations</legend>
+			<p>
+				Date:<input type="text" name="nom" />
+			</p>
+			<p>
+				Lieu: <input type="text" name="lieu" />
+			</p>
+			<p>
+				<input type="radio" name="reponse" value="non" checked>Tri
+				par lieux
+			</p>
+			<p>
+				<input type="radio" name="reponse" value="non">Tri par date
+			</p>
+			<p>
+				<input type="radio" name="reponse" value="non">Tri par
+				techno
+			</p>
+		</fieldset>
+	</form>
+</body>
+</html>
